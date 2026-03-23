@@ -24,3 +24,9 @@ streamlit run app_prodigy.py
 ## Despliegue (URL permanente)
 
 Ver [DEPLOY.md](DEPLOY.md) (Streamlit Community Cloud y alternativas).
+
+Además, el repositorio incluye `docs/index.html` + workflow de GitHub Pages para publicar un portal web en:
+
+`https://Jovalam3008.github.io/Profigy_SST_app/`
+
+Nota: GitHub Pages publica contenido estático; la ejecución de Streamlit se mantiene en Streamlit Community Cloud.

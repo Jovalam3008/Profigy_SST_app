@@ -26,6 +26,31 @@ Si **no** configuras `DATABASE_URL`, la app intentará cargar los Excel del repo
 
 Ese enlace es **permanente** mientras mantengas la app desplegada y el servicio activo.
 
+## Opción complementaria: GitHub Pages (portal público)
+
+GitHub Pages **no puede ejecutar Streamlit en servidor**. Aun así, sí puedes publicar un portal web del proyecto en Pages y desde ahí abrir tu app Streamlit.
+
+Este repositorio ya incluye:
+
+- `docs/index.html` (portal web)
+- `.github/workflows/deploy-pages.yml` (despliegue automático de Pages al hacer push a `main`)
+
+### Activar GitHub Pages
+
+1. Ve a **GitHub → Settings → Pages** en tu repositorio.
+2. En **Build and deployment**, selecciona **Source: GitHub Actions**.
+3. Haz push a `main` (o ejecuta el workflow manualmente en **Actions**).
+4. Obtendrás una URL como:
+
+`https://Jovalam3008.github.io/Profigy_SST_app/`
+
+### Flujo recomendado final
+
+1. Publica `app_prodigy.py` en Streamlit Community Cloud.
+2. Copia la URL final de Streamlit (`https://...streamlit.app`).
+3. Reemplaza en `docs/index.html` el botón principal para abrir tu URL de Streamlit.
+4. Haz commit/push y Pages quedará actualizado automáticamente.
+
 ## Alternativas
 
 | Servicio | Notas |

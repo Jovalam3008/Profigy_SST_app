@@ -111,7 +111,7 @@ def _load_data_from_database(url: str) -> tuple[pd.DataFrame, pd.DataFrame]:
     from sqlalchemy import create_engine, text
 
     engine = create_engine(_with_sslmode(url), pool_pre_ping=True)
-    df_kpi = pd.read_sql(text("SELECT * FROM gold.kpi_mensual_mype"), engine)
+    df_kpi = pd.read_sql(text("SELECT * FROM gold.kpi_mensual_mype_corregido"), engine)
     df_causas = pd.read_sql(text("SELECT * FROM gold.top_causas_mensual"), engine)
     df_kpi["fecha"] = pd.to_datetime(df_kpi["codmes"].astype(str) + "01", format="%Y%m%d")
     df_causas["fecha"] = pd.to_datetime(df_causas["codmes"].astype(str) + "01", format="%Y%m%d")
